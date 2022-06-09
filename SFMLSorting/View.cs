@@ -35,6 +35,8 @@ namespace SFMLSorting
                 window.Draw(GenerateButtonText("Generate Random Array", 15, 15));
                 window.Draw(GenerateButton(370, 10));
                 window.Draw(GenerateButtonText("Quicksort", 375, 15));
+                window.Draw(GenerateButton(730, 10));
+                window.Draw(GenerateButtonText("Bubblesort", 735, 15));
                 ArrayToShapeArray(myController.rndArr);
                 RenderArray();
                 window.Display();
@@ -73,7 +75,7 @@ namespace SFMLSorting
             shapeArray[index2].FillColor = new Color(102, 255, 255);
         }
 
-        public void ShapeArrayRollBackColor(int index)
+        public void ShapeArrayHeightlightRed(int index)
         {
             ArrayToShapeArray(myController.rndArr);
             shapeArray[index].FillColor = new Color(255, 153, 128);
@@ -116,6 +118,10 @@ namespace SFMLSorting
             if (x >= 370 && x <= 530 && y >= 10 && y <= 60)
             {
                 myController.RunQuickSort();
+            }
+            if (x >= 730 && x <= 1080 && y >= 10 && y <= 60)
+            {
+                myController.RunBubbleSort();
             }
         }
 

@@ -50,14 +50,19 @@ namespace SFMLSorting
             view.ShapeArrayHeighlight(index1, index2);
         }
 
-        public void ShapeArrayRollBackColor(int index)
+        public void ShapeArrayHeightlightRed(int index)
         { 
-            view.ShapeArrayRollBackColor(index);
+            view.ShapeArrayHeightlightRed(index);
         }
 
         public void RunQuickSort()
         {
             sorting.RunQuickSort();
+        }
+
+        public void RunBubbleSort()
+        {
+            sorting.RunBubbleSort();
         }
     }
 }
